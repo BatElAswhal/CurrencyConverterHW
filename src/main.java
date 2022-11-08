@@ -15,12 +15,12 @@ public class main {
             System.out.println("Press  4 to convert a ILS to EUR");
             System.out.println("press 0 to exit");
 
-            int amount = 0;
+            double amount = 0;
             userSelection = scanner.nextInt();
 
             if (userSelection == 1 || userSelection == 2 || userSelection == 3 || userSelection == 4) {
                 System.out.println("Please enter the amount you want to convert:");
-                amount = scanner.nextInt();
+                amount = scanner.nextDouble();
             }
 
             switch (userSelection) {
