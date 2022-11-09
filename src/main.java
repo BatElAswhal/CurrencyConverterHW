@@ -16,11 +16,21 @@ public class main {
             System.out.println("press 0 to exit");
 
             double amount = 0;
-            userSelection = scanner.nextInt();
+            try{
+            userSelection = scanner.nextInt();}
+            catch (Exception err) {
+                System.out.println("You must enter valid option");
+                userSelection = 0;
+            }
 
             if (userSelection == 1 || userSelection == 2 || userSelection == 3 || userSelection == 4) {
                 System.out.println("Please enter the amount you want to convert:");
-                amount = scanner.nextDouble();
+                try{
+                    amount = scanner.nextDouble();}
+                catch (Exception err) {
+                    System.out.println("You must enter valid amount");
+                    userSelection = 0;
+                }
             }
 
             switch (userSelection) {
